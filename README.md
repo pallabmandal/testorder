@@ -29,6 +29,7 @@
 - run ``` php artisan migrate ```
 - Create the default Role from seeder ```  php artisan db:seed --class=RoleSeeder  ```
 - run ``` php artisan passport:install ```
+- run ``` php artisan key:generate ```
 - Import customers. ``` php artisan import:customers ```
 - Import Products. ``` php artisan import:products ```
 - run ``` php artisan serve ``` this will start the server on localhost port 8000
