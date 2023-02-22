@@ -93,7 +93,7 @@ class OrderController extends Controller
         if($processPayment->status == config('constants.status.payment_completed')){
             $finalorder = OrderHelper::markOrderAsPaid($preparedOrder);
         } else {
-            throw new \App\Exceptions\PaymentException("Enable to process Payment. ".$processPayment->payment_response.". Please try some other payment methods");
+            throw new \App\Exceptions\PaymentException("Unable to process Payment. ".$processPayment->payment_response.". Please try some other payment methods");
         }
 
         return $this->buildSuccess('success', $finalorder, 'Item Added successfully', Response::HTTP_OK);
